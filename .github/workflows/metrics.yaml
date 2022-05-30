@@ -10,7 +10,23 @@ jobs:
   github-metrics:
     runs-on: ubuntu-latest
     steps:
-      - uses: lowlighter/metrics@latest
+      - name: Profile
+        uses: lowlighter/metrics@latest
         with:
           token: ${{ secrets.METRICS_TOKEN }}
+      - name: Commit Calendar
+        uses: lowlighter/metrics@latest
+        with:
+          token: ${{ secrets.METRICS_TOKEN }}
+          base: ""
+          filename: metrics.plugin.isocalendar.svg
+          plugin_isocalendar: true
+      - name: Most Used Languages
+        uses: lowlighter/metrics@latest
+        with:
+          token: ${{ secrets.METRICS_TOKEN }}
+          base: ""
+          filename: metrics.plugin.languages.svg
+          plugin_languages: true
+
 
