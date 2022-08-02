@@ -1,3 +1,3 @@
 module github.com/genkami/genkami
 
-go 1.15
+go 1.19
